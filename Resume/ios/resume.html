@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E6%B1%AA%E6%BD%87%E5%87%AFwang-xiaokai">汪潇凯/Wang XiaoKai</h1>
+<h2 id="%E5%A4%A7%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88">大前端开发工程师</h2>
+<ul>
+<li>性别：男</li>
+<li>手机：18511859064</li>
+<li>邮箱：<a href="mailto:wxk.cn@outlook.com">wxk.cn@outlook.com</a></li>
+<li>年龄：29</li>
+<li>籍贯：安徽</li>
+</ul>
+<h2 id="%E6%95%99%E8%82%B2%E7%BB%8F%E5%8E%86">教育经历</h2>
+<h3 id="%E6%9C%AC%E7%A7%91---%E4%B8%AD%E5%9B%BD%E7%9F%B3%E6%B2%B9%E5%A4%A7%E5%AD%A6%E5%8C%97%E4%BA%AC">本科 - 中国石油大学（北京）</h3>
+<blockquote>
+<p>计算机科学与技术</p>
+</blockquote>
+<h3 id="%E4%B8%93%E7%A7%91---%E5%AE%89%E5%BE%BD%E6%96%B0%E5%8D%8E%E5%AD%A6%E9%99%A2">专科 - 安徽新华学院</h3>
+<blockquote>
+<p>软件技术</p>
+</blockquote>
+<h2 id="%E6%8A%80%E6%9C%AF%E7%BB%8F%E5%8E%86">技术经历</h2>
+<ol>
+<li>熟练使用VScode、Xcode、Postman、iTerm2、微信开发者工具、快应用开发工具等开发者工具</li>
+<li>熟练使用github、gitlab、SourceTree、svn等项目管理工具</li>
+<li>扎实的HTLM5、CSS3、JavaScript（ES6+）基本功</li>
+<li>熟悉Vue和React框架</li>
+<li>熟练使用Bootstrap、antd、Material-ui、Element UI、Ant Design Vue等前端UI框架</li>
+<li>了解TypeScript、PHP等知识</li>
+<li>了解Linux系统、HTTP/HTTPS web服务的部署脚本及nginx服务器配置</li>
+<li>了解ios程序、微信小程序、快应用程序、php开发、程序部署、服务器配置等开发经验</li>
+<li>扎实的 objtive-c swift 基础，熟练使用 AFNetworking、FMBD、YYKit、RxSwift 等框架</li>
+</ol>
+<h2 id="%E5%B7%A5%E4%BD%9C%E7%BB%8F%E5%8E%86">工作经历</h2>
+<h3 id="%E5%8C%97%E4%BA%AC%E9%B9%B0%E4%B9%8B%E7%9C%BC%E6%99%BA%E8%83%BD%E5%81%A5%E5%BA%B7%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">北京鹰之眼智能健康科技有限公司</h3>
+<blockquote>
+<p>客户端开发工程师（2020.09.24 - 2022.04.22)</p>
+</blockquote>
+<pre><code>岗位职责：1. 负责公司鹰眼智能云平台的前端、iOS 和 小程序开发与维护 
+        2. 参与制定并优化项目开发部署流程
+        3. 负责云平台his组开发需求评审及分配
+</code></pre>
+<h3 id="%E5%8C%97%E4%BA%AC%E4%B9%9D%E8%8B%91%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">北京九苑信息技术有限公司</h3>
+<blockquote>
+<p>前端开发工程师（2017.07.24 - 2020.09.23）</p>
+</blockquote>
+<pre><code>岗位职责：1. 负责B/S架构前端开发工作，设计并完善前端基础服务框架
+        2. 负责广告推广等相关H5活动页面、小程序、快应用的开发及部署
+        3. 独立负责工作小组，负责软件开发技术和规范及标准流程的改进
+</code></pre>
+<h3 id="%E6%99%BA%E6%85%A7%E7%A5%9E%E5%B7%9E%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E5%8C%97%E4%BA%AC%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8">智慧神州网络科技（北京）有限公司</h3>
+<blockquote>
+<p>ios开发工程师（2015.01.19 - 2017.07.23）</p>
+</blockquote>
+<pre><code>岗位职责：1. 优化药考拉客户端页面代码的性能
+        2. 与产品，UI保持良好的沟通，确保程序功能与设计需求一致；
+</code></pre>
+<h2 id="%E9%A1%B9%E7%9B%AE%E7%BB%8F%E5%8E%86">项目经历</h2>
+<h3 id="%E9%A1%B9%E7%9B%AE%E9%B9%B0%E7%9C%BC%E6%99%BA%E8%83%BD%E4%BA%91%E5%B9%B3%E5%8F%B0">项目：鹰眼智能云平台</h3>
+<pre><code>说明：云平台是一个以中医红外算法为核心，通过App、小程序，大屏显示，诊所端，运营端，商户端等程序打造的数字中医平台，为客户提供基于大数据和算法的全新中医治疗体验。 
+职责：1. 使用vue-element-admin构建web后台系统（诊所端，运营端，商户端） 
+     2. 配合业务，优化和改进table，dialog，form等组件， 
+     3. 在诊所端红外图像业务使用canvas前端绘制客户红外图像，并通过特定算法实时调整温窗改变红外图像 
+     4. 在诊所端，开发基于不同诊所，不同客户的红外检查结果生成大量echarts的中医报告，并可下载pdf保存 
+     5. 在运营端，开发控制所有后端系统的菜单，按钮及接口权限的模块 
+     6. 在商户端，开发商品入库模块，商品的信息，图片，二维码，价格等。 
+     7. 在用户端，提供 App &amp; 小程序提供用户预约，信息浏览。
+</code></pre>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%B9%9D%E8%8B%91%E5%B9%BF%E5%91%8A%E6%95%B0%E5%AD%97%E5%B9%B3%E5%8F%B0">项目：九苑广告数字平台</h3>
+<pre><code>说明：一个ios渠道DSP广告投放数据的整合展示，分销商、广告主、管理员等多种权限及组合权限用户对数据的操作审批的平台
+职责：1. 根据业务对前端框架进行技术选型，选择了Ant Design框架及React框架
+     2. 和后台规划权限字典、token、数据格式、密码加密方式等接口规范并使用Postman测试，并辅助编写前端接口文档
+     3. 根据用户权限设计react-router路由模块，及动态菜单栏
+     4. 完成管理员模块中分销商公司，广告主公司，渠道app，系统用户等数据表格的开发
+     5. 完成通用表格高级条件筛选组件开发，包括模糊查询，日期段，指定渠道，各种订单状态等条件
+     6. 通过自定义table组件完成对编辑表格的多层嵌套开发
+     7. 管理gitlab issue的项目需求功能和bug修复
+</code></pre>
+<h3 id="%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%9B%BD%E8%81%94%E9%80%9Asimcard%E6%B8%A0%E9%81%93%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E9%A1%B5">项目：中国联通simcard渠道产品数据管理页</h3>
+<pre><code>说明：对中国联通simcard产品的各个渠道的推广效果数据进行整合展示，允许各种条件的筛查及打印核对
+职责：1. 根据业务的需求选择了拥有丰富第三方日期组件的Material-ui框架和  React框架，后台选型基于自己的技术栈
+     2. 创建mysql数据库及各类表、使用PHP7.0搭建数据的基本增删改查接口及编写条件查询和数据整合接口
+     3. 完成数据统计表，渠道表，产品表的table开发及通用增删改查模块的开发
+     4. 使用nginx配置服务器并编写部署服务器的脚本
+</code></pre>
+<h3 id="%E9%A1%B9%E7%9B%AE%E8%8D%AF%E8%80%83%E6%8B%89">项目：药考拉</h3>
+<pre><code>说明：中国医药科技出版社出品协助医考生的app，主要提供医考类学习视频，以及老师，教授直播授课等内容
+职责：1. 负责 App 网路层 和 登录框架开发
+     2. 负责药考拉 App 首页组件开发以及架构
+     3. 负责药考拉 App 直播页功能开发以及架构
+</code></pre>
+<h2 id="%E8%87%AA%E6%88%91%E8%AF%84%E4%BB%B7">自我评价</h2>
+<pre><code>1. 8年互联网工作经验
+2. 拥有一些全栈开发经验，能够从多角度解决项目问题
+3. 多个从0开始的项目经验
+4. 独立开发过项目，也管理过小组开发项目
+</code></pre>
+<hr>
+<p>@2023 Made by 汪潇凯</p>
+
+</body>
+</html>

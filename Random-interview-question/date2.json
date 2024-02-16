@@ -1,0 +1,62 @@
+[
+    {
+        "knowledgePoints":"UI",
+        "questionArr":[
+            { "title" : "UIView和CALayer的区别和联系?" },
+            { "title" : "UIResponder的理解?" },
+            { "title" : "使用 drawRect有什么影响?" },
+            { "title" : "Bounds和Frame的区别?" },
+            { "title" : "KeyWindow和delegate中的window的区别?" },
+            { "title" : "性能优化-对TableView进行性能优化有哪些方式？" },
+            { "title" : "float布局的问题,以及clearfix" },
+            { "title" : "flex画色子?" },
+            { "title" : "absolute和relative分别依据什么定位?" },
+            { "title" : "居中对齐有哪些实现方式?" },        
+            { "title" : "line-height的继承问题?" },
+            { "title" : "rem是什么??" },
+            { "title" : "如何实现响应式?" },
+            { "title" : "vm/vh?" }
+        ]
+    },
+    {
+        "knowledgePoints":"代码设计",
+        "questionArr":[
+            { "title" : "block和delegate的区别?" },
+            { "title" : "为什么Block用copy关键字?" },
+            { "title" : "KVO的实现原理?" },
+            { "title" : "MVC、MVVM、MVP的优缺点?" }
+        ]
+    },
+    {
+        "knowledgePoints":"内存管理",
+        "questionArr":[
+            { "title" : "1. 什么情况使用weak关键字，相比assign有什么不同?" },
+            { "title" : "2. DOM常用的API?" },
+            { "title" : "3. iOS自动释放池是什么，如何工作?" }
+        ]
+    },
+    {
+        "knowledgePoints":"多线程",
+        "questionArr":[
+            { "title" : "1. 什么是GCD ？谈谈你对GCD的理解？?" },
+            { "title" : "2. http常见的header有哪些" },
+            { "title" : "3. 什么是Restful API" }
+        ]
+    },
+    {
+        "knowledgePoints":"prod-env",
+        "questionArr":[
+            { "title" : "1. 从输入url到渲染出页面的整个过程?" },
+            { "title" : "2. window.onload 和 DOMContentLoaded的区别" },
+            { "title" : "3. 常见的web端攻击方式有哪些?" }
+        ]
+    },
+    {
+        "knowledgePoints":"dev-env",
+        "questionArr":[
+            { "title" : "1. 常见git命令?" },
+            { "title" : "2. 常见linux命令?" },
+            { "title" : "3. 常见抓包工具?" }
+        ]
+    }
+]

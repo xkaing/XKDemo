@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debounce</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input1">
+    <script>
+        const input1 = document.getElementById('input1')
+        let timer = null
+        input1.addEventListener('keyup', function () {
+            // 如果用户500ms内连续输入则清除上一个timer，
+            if (timer) {
+                clearTimeout(timer)
+            }
+            // 新建一个定时任务，500ms触发事件
+            timer = setTimeout(() => {
+                // 触发change事件
+                console.log(input1.value)
+                // 清空定时器
+                timer = null
+            }, 500)
+        })
+
+        //封装 debounce
+        // function debounce(fn, delay = 500) {
+        //     // timer 是闭包中的
+        //     let timer = null
+
+        //     return function () {
+        //         if (timer) {
+        //             clearTimeout(timer)
+        //         }
+        //         timer = setTimeout(() => {
+        //             fn.apply(this, arguments)
+        //             timer = null
+        //         }, delay)
+        //     }
+        // }
+
+        // input1.addEventListener('keyup', debounce(function (e) {
+        //     console.log(e.target)
+        //     console.log(input1.value)
+        // }, 600))
+    </script>
+</body>
+
+</html>

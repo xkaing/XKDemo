@@ -1,0 +1,61 @@
+[
+    {
+        "knowledgePoints":"html/css",
+        "questionArr":[
+            { "title" : "如何理解HTML语义化?" },
+            { "title" : "在默认情况下,哪些HTML标签是块级元素、哪些是内联元素?" },
+            { "title" : "盒子模型宽度如何计算?" },
+            { "title" : "margin 纵向重叠问题?" },
+            { "title" : "margin 负值问题?" },
+            { "title" : "BFC的理解应用。" },
+            { "title" : "float布局的问题,以及clearfix" },
+            { "title" : "flex画色子?" },
+            { "title" : "absolute和relative分别依据什么定位?" },
+            { "title" : "居中对齐有哪些实现方式?" },
+            { "title" : "line-height的继承问题?" },
+            { "title" : "rem是什么??" },
+            { "title" : "如何实现响应式?" },
+            { "title" : "vm/vh?" }
+        ]
+    },
+    {
+        "knowledgePoints":"js-basic",
+        "questionArr":[
+            { "title" : "typeof能够判断哪些类型?" },
+            { "title" : "何时使用 === 何时使用 ==?" },
+            { "title" : "值类型和引用类型的区别?" }
+        ]
+    },
+    {
+        "knowledgePoints":"js-web-api",
+        "questionArr":[
+            { "title" : "1. DOM是哪种数据结构?" },
+            { "title" : "2. DOM常用的API?" },
+            { "title" : "3. attr和property的区别?" }
+        ]
+    },
+    {
+        "knowledgePoints":"http",
+        "questionArr":[
+            { "title" : "1. http常见的状态码有哪些?" },
+            { "title" : "2. http常见的header有哪些" },
+            { "title" : "3. 什么是Restful API" }
+        ]
+    },
+    {
+        "knowledgePoints":"prod-env",
+        "questionArr":[
+            { "title" : "1. 从输入url到渲染出页面的整个过程?" },
+            { "title" : "2. window.onload 和 DOMContentLoaded的区别" },
+            { "title" : "3. 常见的web端攻击方式有哪些?" }
+        ]
+    },
+    {
+        "knowledgePoints":"dev-env",
+        "questionArr":[
+            { "title" : "1. 常见git命令?" },
+            { "title" : "2. 常见linux命令?" },
+            { "title" : "3. 常见抓包工具?" }
+        ]
+    }
+]
