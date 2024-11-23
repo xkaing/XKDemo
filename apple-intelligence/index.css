@@ -1,14 +1,16 @@
 body{
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .dd-holiday-animation-container {
     width: 100%;
     height: 75px;
     position: absolute;
-    top: 75px;
+    top: 0px;
     left: 0;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    /* box-sizing: border-box; */
 }
 
 .dd-holiday-animation-colors {
@@ -27,9 +29,9 @@ body{
 } */
 
 .dd-holiday-animation-color {
-    /* filter:blur(20px); */
+    filter:blur(20px);
     position: absolute;
-    /* border-radius: 50% */
+    border-radius: 50%
 }
 
 .dd-holiday-animation-yellow {
@@ -131,6 +133,7 @@ body{
     width: 60vw;
     height: 75px;
     top: -100px;
+    /* 间隔20px */
     left: 0;
     background: #4186fd;
     opacity: .5;
