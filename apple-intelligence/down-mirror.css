@@ -1,0 +1,138 @@
+.apple-ai-down{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    /* border: 1px solid black; */
+    /* box-sizing: border-box; */
+}
+.down-colors{
+    opacity: 1;
+    transform: translate3d(0,0,0)
+}
+.down-color{
+    filter:blur(20px);
+    position: absolute;
+    border-radius: 50%
+}
+.down-yellow{
+    width: 40vw;
+    height: 50px;
+    background: #fd8c1f;
+    top: 100px;
+    left: 10vw;
+    animation: yellowAnimationDown 1.5s ease-out forwards .5s;
+}
+@keyframes yellowAnimationDown {
+    0% {
+        top: 100px;
+        left: 10vw;
+    }
+
+    50% {
+        top: 55px
+    }
+    100% {
+        top: 55px;
+        left: 0
+    }
+}
+.down-pink-one {
+    width: 40vw;
+    height: 150px;
+    background: #ff3f98;
+    top: 125px;
+    /* 75+(200-150) */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: .5;
+    animation: pinkOneAnimationDown 2s ease-in-out forwards
+}
+
+@keyframes pinkOneAnimationDown {
+    0% {
+        top: 125px;
+        transform: scaleX(50%) translateX(0)
+    }
+
+    25% {
+        top: 35px;
+        transform: scaleX(50%) translateX(0)
+    }
+
+    50% {
+        top: 45px;
+        transform: scaleX(225%) translateX(-10%)
+    }
+
+    100% {
+        top: 60px;
+        background: #e44cbb;
+        transform: scaleX(225%) translateX(0)
+    }
+}
+
+.down-pink-two {
+    width: 30vw;
+    height: 150px;
+    background: #e9a5ff;
+    top: 125px;
+    right: -25%;
+    left: 0;
+    margin: 0 auto;
+    animation: pinkTwoAnimationDown 1.2s ease-in-out forwards
+}
+
+@keyframes pinkTwoAnimationDown {
+    0% {
+        top: 125px;
+        transform: scaleX(50%) translateX(0)
+    }
+
+    25% {
+        top: 45px;
+        transform: scaleX(70%) translateX(10%)
+    }
+
+    50% {
+        top: 55px;
+        transform: scaleX(225%) translateX(-10%)
+    }
+
+    100% {
+        top: 60px;
+        background: #f55be4;
+        transform: scaleX(225%) translateX(0);
+        right: 0
+    }
+}
+
+.down-blue {
+    width: 60vw;
+    height: 75px;
+    top: 100px;
+    right: 0;
+    background: #4186fd;
+    opacity: .5;
+    animation: blueAnimationDown 1s ease .2s forwards
+}
+
+@keyframes blueAnimationDown {
+    0% {
+        top: 100px;
+        transform: translateX(0)
+    }
+
+    50% {
+        top: 50px;
+        transform: translateX(15%)
+    }
+
+    100% {
+        top: 50px;
+        background: #019ffb;
+        transform: translateX(0)
+    }
+}
